@@ -1,0 +1,60 @@
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin contentAlignCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin transitionWithDelay {
+  transition: all 0.9s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-delay: 0.1s;
+}
+/*
+0 - 600px:       Phone
+600 - 900px:     Tablet portrait
+900 - 1,200px:   Tablet landscape
+1,200 - 1,800:   Normal Desktop (Design-spec)
+1,800 +:         Big desktop
+
+breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Responsive design working order:
+ - Base + typography
+ - General layout + grid
+ - Page layout
+ - Components
+
+1em = 16pxS
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 35.5em) {
+      @content
+    }
+  };
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content
+    }
+  };
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content
+    }
+  };
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    }
+  };
+};

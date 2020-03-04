@@ -1,0 +1,27 @@
+.container {
+  min-width: 100%;
+  background-color: var(--color-blue-6);
+  min-height: 60rem;
+}
+
+.content {
+  display: flex;
+
+}
+
+.navigation {
+  flex: 0 0 30%;
+  background-color: var(--color-blue-primary);
+}
+
+.main-section {
+  background-color: white;
+  flex: 1;
+  margin-top: 9rem;
+  margin-left: 8rem;
+  @include transitionWithDelay;
+
+  &__home-page {
+    margin-left: 6rem;
+  }
+}
