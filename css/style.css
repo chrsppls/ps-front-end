@@ -27,12 +27,14 @@ Responsive design working order:
   --color-blue-4: #0bd0d9;
   --color-blue-5: #dbeff9;
   --color-blue-6: #c9d3f1;
+  --color-blue-7: #f0f6ff;
   --color-red-1: #c00000;
   --color-red-2: #f34743;
   --color-red-2: #fab2b0;
-  --color-red-1: #387026;
-  --color-red-2: #55a839;
-  --color-red-2: #cbeac0;
+  --color-green-1: #002e0c;
+  --color-green-2: #387026;
+  --color-green-3: #55a839;
+  --color-green-4: #cbeac0;
   --color-grey-dark: #595959;
   --color-grey-medium: #bfbfbf;
   --color-grey-light: #f2f2f2;
@@ -228,7 +230,7 @@ body {
   background-color: var(--color-blue-primary); }
 
 .main-section {
-  background-color: white;
+  background-color: var(--color-blue-7);
   flex: 1;
   margin-top: 9rem;
   margin-left: 8rem;
@@ -496,6 +498,11 @@ body {
   .divider__white {
     background: var(--color-grey-light); }
 
+.content-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-close); }
+
 .main-section__profile-section {
   display: flex; }
 
@@ -511,16 +518,17 @@ body {
   display: flex; }
 
 .cta {
-  background-color: var(--color-grey-light);
+  background-color: white;
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-right: 3rem;
   text-align: center;
+  border-radius: 5px;
   box-shadow: var(--box-shadow-close); }
   .cta__main-title {
     line-height: 1.2;
-    padding-top: 1rem;
-    padding-bottom: 1rem; }
+    font-size: 2.5rem;
+    padding: 1rem; }
   .cta__sub-title {
     padding-top: 1rem; }
   .cta__form {
@@ -528,7 +536,7 @@ body {
     flex-direction: column;
     justify-content: center; }
     .cta__form--input-field {
-      margin-top: 2.5rem;
+      margin-top: 1rem;
       margin-bottom: 1rem;
       align-items: center;
       justify-content: center;
@@ -577,11 +585,11 @@ body {
     display: flex;
     align-content: space-between; }
   .quick-stats__stat-box {
-    background-color: var(--color-grey-light);
+    background-color: white;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     display: flex;
-    height: 18rem;
+    height: 12rem;
     flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
@@ -598,34 +606,34 @@ body {
       background-image: linear-gradient(to right, var(--color-blue-2), var(--color-blue-3));
       color: white;
       width: 100%;
-      height: 4rem;
+      height: 3.5rem;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
       position: relative;
-      top: -.5rem;
       padding-top: 0.5rem;
       padding-left: 1rem;
       font-weight: 700;
       transition: all 0.2s; }
     .quick-stats__stat-box--box-stat {
       font-family: lato;
-      font-size: 8rem;
-      font-weight: 100;
+      font-size: 5.5rem;
+      font-weight: 300;
       line-height: 1;
       text-align: center;
       transition: all 0.1s; }
     .quick-stats__stat-box--link {
       align-self: flex-end;
+      align-items: center;
       -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
       clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
       background-image: linear-gradient(to right, var(--color-blue-2), var(--color-blue-primary));
       width: 100%;
       color: white;
-      height: 4rem;
-      top: 0.5rem;
+      height: 3rem;
       position: relative;
       text-align: right;
-      padding-top: 1rem;
+      vertical-align: middle;
+      padding-top: 0.5rem;
       padding-right: 1rem;
       text-decoration: none;
       transition: all 0.2s; }
@@ -635,62 +643,113 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
   .quick-stats__stat-box:hover .quick-stats__stat-box--box-stat {
-    font-weight: 300;
-    padding-bottom: 0.5rem; }
+    font-weight: 400; }
   .quick-stats__stat-box:hover .quick-stats__stat-box--link {
-    top: 0;
     left: 0;
     -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%); }
 
-.companies {
+.profile-card {
   margin-bottom: 0.5rem;
   margin-left: 3rem;
   margin-right: 1.5rem;
   width: 50%; }
-  .companies__section-title {
+  .profile-card__type {
+    position: absolute;
+    height: 3rem;
+    width: 90%;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    padding-left: .9rem;
+    padding-top: .2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 100%); }
+    .profile-card__type--company {
+      color: var(--color-blue-primary);
+      background-image: linear-gradient(to right, var(--color-blue-4), var(--color-blue-6)); }
+    .profile-card__type--project {
+      color: var(--color-green-1);
+      background-image: linear-gradient(to right, var(--color-green-3), var(--color-green-4)); }
+  .profile-card__card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 1rem; }
+  .profile-card__summary-box {
+    display: flex;
+    flex: 30% 0 0;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 2rem; }
+    .profile-card__summary-box--logo-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem; }
+    .profile-card__summary-box--logo {
+      height: 10rem;
+      width: 100%;
+      padding: .5rem;
+      object-fit: contain; }
+    .profile-card__summary-box--location {
+      text-align: center;
+      font-size: 1.3rem; }
+    .profile-card__summary-box--stat-box {
+      display: flex;
+      justify-content: space-between; }
+    .profile-card__summary-box--follow-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem; }
+  .profile-card__description-box {
+    margin-left: 1rem;
+    margin-right: 2rem; }
+    .profile-card__description-box--heading {
+      z-index: 99;
+      font-size: 3rem !important;
+      height: 7rem;
+      margin-top: 2.5rem;
+      vertical-align: middle;
+      line-height: 1;
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center; }
+    .profile-card__description-box--description {
+      margin-bottom: 1rem; }
+    .profile-card__description-box--description-link {
+      text-align: right; }
+    .profile-card__description-box--view-profile, .profile-card__description-box--view-profile:link, .profile-card__description-box--view-profile:visited {
+      cursor: pointer;
+      color: var(--color-blue-primary);
+      margin-top: 4rem;
+      text-decoration: none;
+      transition: all .3s; }
+    .profile-card__description-box--view-profile span {
+      font-size: 3rem;
+      transition: all .3s;
+      font-weight: 700; }
+    .profile-card__description-box--view-profile:hover {
+      font-weight: 700; }
+      .profile-card__description-box--view-profile:hover span {
+        margin-left: .5rem; }
+  .profile-card__section-title {
     display: flex;
     align-items: center; }
-    .companies__section-title--follow-icon {
+    .profile-card__section-title--follow-icon {
       margin-right: 1rem;
       height: 3.5rem;
       width: 3.5rem; }
-  .companies__card {
-    margin-bottom: 1rem;
-    border: 0.5px solid var(--color-grey-medium);
-    z-index: 10; }
-    .companies__card--header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; }
-  .companies__title {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    height: 4rem; }
-    .companies__title--logo-box {
-      height: 3rem;
-      width: 6rem;
-      display: flex;
-      padding: 1px; }
-    .companies__title--logo {
-      width: 100%;
-      object-fit: contain; }
-    .companies__title--project-name {
-      margin-left: 1rem;
-      font-size: 2rem; }
-  .companies__buttons {
+  .profile-card__buttons {
     display: flex;
     height: 2rem; }
-    .companies__buttons--button {
+    .profile-card__buttons--button {
       margin-right: 1rem;
       padding-right: 1rem;
       padding-left: 1rem; }
-  .companies__description {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem; }
+  .profile-card__description {
+    margin: 1rem 1.5rem; }
 
 .project {
   margin-bottom: 0.5rem;
@@ -739,10 +798,10 @@ body {
     display: flex;
     flex: 1; }
     .project__companies--container-heading {
-      margin-top: .5rem;
-      margin-bottom: .5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
       text-decoration: underline;
-      margin-left: .5rem;
+      margin-left: 0.5rem;
       font-weight: 700;
       font-size: 1.4rem; }
     .project__companies--concept-owners {
@@ -760,22 +819,19 @@ body {
       background-color: white;
       border-radius: 100px;
       border: 1px solid var(--color-grey-dark);
-      margin-right: .5rem;
-      margin-bottom: .5rem; }
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem; }
       .project__companies--container-item:not(:last-child) {
         cursor: pointer; }
       .project__companies--container-item:first-child {
-        margin-left: .5rem; }
+        margin-left: 0.5rem; }
     .project__companies--overflow-counter {
       font-size: 1.8rem;
       font-weight: 700;
       text-align: center;
       vertical-align: middle; }
   .project__description {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem; }
+    margin: 1rem 1.5rem; }
 
 .active-page {
   display: flex; }
