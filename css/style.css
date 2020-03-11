@@ -503,6 +503,47 @@ body {
   border-radius: 10px;
   box-shadow: var(--box-shadow-close); }
 
+.praise__box {
+  background-color: var(--color-blue-primary);
+  background-color: var(--color-blue-7);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 10rem;
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  opacity: .6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-blue-primary);
+  cursor: pointer;
+  transition: all .2s; }
+  .praise__box:hover {
+    background-color: var(--color-blue-3);
+    opacity: .8;
+    top: .4rem;
+    box-shadow: var(--box-shadow-far); }
+  .praise__box:active {
+    background-color: var(--color-blue-1);
+    opacity: .8;
+    top: .5rem;
+    box-shadow: var(--box-shadow-close); }
+  .praise__box:hover .praise__box--icon {
+    fill: white; }
+  .praise__box--icon {
+    fill: var(--color-blue-6);
+    height: 1.7rem;
+    width: 1.7rem;
+    transition: all .2s;
+    pointer-events: none; }
+
+.active-praise {
+  background-color: var(--color-blue-primary);
+  opacity: 1; }
+  .active-praise__icon {
+    fill: white; }
+
 .main-section__profile-section {
   display: flex; }
 
