@@ -328,34 +328,13 @@
     &--description-link {
       // text-decoration: none;
       text-align: right;
+      margin-top: 1rem;
     }
 
     &--view-profile {
-      &,
-      &:link,
-      &:visited {
-        cursor: pointer;
-        color: var(--color-blue-primary);
-        margin-top: 4rem;
-        text-decoration: none;
-        // border-bottom: 1px solid var(--color-blue-primary);
-        transition: all .3s;
-      }
 
-      & span {
-        font-size: 3rem;
-        transition: all .3s;
-        // margin-top: -1rem;
-        font-weight: 700;
-      }
 
-      &:hover {
-        font-weight: 700;
 
-        & span {
-          margin-left: .5rem;
-        }
-      }
     }
   }
 

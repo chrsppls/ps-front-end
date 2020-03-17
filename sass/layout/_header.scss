@@ -5,7 +5,6 @@
   left: 0;
   height: 9rem;
   width: 100%;
-
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-white);
@@ -18,16 +17,13 @@
     align-items: center;
     background-color: white;
 
-
     &--image {
       height: 6rem;
       margin-left: 2rem;
       margin-right: 1.5rem;
     }
 
-    &--title-box {
-
-    }
+    &--title-box {}
 
     &--title {
       font-size: 4rem;
@@ -36,7 +32,7 @@
     &--subtitle {
       margin-top: -1rem;
       font-size: 1.5rem;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -58,7 +54,7 @@
       height: 3.5rem;
       border-radius: 10rem;
       width: 55%;
-      transition: all .2s;
+      transition: all 0.2s;
       margin-right: -3.5rem;
 
       &:focus {
@@ -79,32 +75,53 @@
       border: transparent;
       fill: var(--color-grey-dark);
       cursor: pointer;
-
     }
 
     &--icon {
       height: 2.5rem;
       width: 2rem;
       background: none;
-
     }
+  }
+
+  &__nav {
+    position: relative;
   }
 
   &__user-nav {
     // flex: 1;
-    // background-color: yellow;
+    background-color: white;
     display: flex;
-    box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    // box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    border: 1px solid lightgrey;
+    border-radius: 3px;
     align-items: center;
     justify-content: flex-end;
     margin-right: 5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    // User Nav Menu Hover Effects
+    &:hover {
+      box-shadow: var(--box-shadow-far);
+    }
+
+    &:hover &--user-image {
+      box-shadow: var(--box-shadow-far);
+    }
+    // User Nav Menu Click Effects
+    &:active {
+      box-shadow: var(--box-shadow-close);
+    }
+
+    &:active &--user-image {
+      box-shadow: var(--box-shadow-close);
+    }
 
     &--icon-box {
       // background-color: orange;
       display: flex;
       width: 1.5rem;
       outline: none;
-
     }
 
     &--icon {
@@ -122,8 +139,6 @@
       // align-items: stretch;
       align-items: center;
       margin-right: -2rem;
-
-
     }
 
     &--user-image {
@@ -132,14 +147,16 @@
       border-radius: 100%;
       border: 1px solid black;
       margin-left: 2rem;
-
-
-      box-shadow: var(--box-shadow-close);
-      transition: all .2s;
-
+      // box-shadow: var(--box-shadow-close);
+      transition: all 0.2s;
+      // @include transitionWithDelay;
       &:hover {
         box-shadow: var(--box-shadow-far);
         transform: translateY(-1px);
+      }
+
+      &:hover ~ .header__user-nav {
+        box-shadow: var(--box-shadow-far);
       }
 
       &:active {
@@ -150,5 +167,199 @@
     &--user-name {
       padding-left: 1rem;
     }
+  }
+}
+
+.account-menu {
+  background-color: var(--color-grey-light);
+  position: absolute;
+  top: 3.8rem;
+  right: 4.5rem;
+  width: 35rem;
+  box-shadow: var(--box-shadow-far);
+  cursor: default;
+
+  &__icons {
+    height: 1.2rem;
+    width: 1.2rem;
+    fill: var(--color-blue-primary);
+    margin-right: 1rem;
+  }
+
+  &__header-box {
+    display: flex;
+    background-color: white;
+  }
+
+  &__account-photo-box {
+    width: 9rem;
+    padding: 1rem;
+    background-color: white;
+
+    &--image {
+      height: 7rem;
+      width: 7rem;
+      object-fit: cover;
+      border-radius: 10rem;
+    }
+  }
+
+  &__account-details {
+    background-color: white;
+    padding-left: 1rem;
+    margin-top: 1rem;
+
+    &--name {
+      font-size: 2.8rem;
+      line-height: 1;
+    }
+
+    &--type {
+      font-size: 1.4rem;
+    }
+
+    &--upgrade {
+      margin-top: -.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &--upgrade-icon {
+      height: 1.4rem;
+      width: 1.4rem;
+      fill: var(--color-blue-primary);
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__manage-account {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: fit-content;
+    display: flex;
+
+    &:last-child {
+      margin-bottom: 0rem;
+    }
+
+    &--button {
+      border: none !important;
+      font-size: 1.4rem !important;
+    }
+  }
+
+  &__watchlist {
+    margin-left: 1rem;
+    margin-top: .5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    &--label {
+      font-weight: 700;
+      color: var(--color-grey-dark);
+      margin-bottom: .5rem;
+      font-size: 1.9rem;
+    }
+  }
+
+  &__watched-item {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+    margin-bottom: .7rem;
+    &--container {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+    }
+
+    &--icon {
+      height: 1.9rem;
+      width: 1.9rem;
+      fill: var(--color-blue-primary);
+      margin-right: 1rem;
+      margin-left: 0rem !important;
+    }
+
+    &--label {
+      &:hover ~ .account-menu__watched-item--count {
+        color: red;
+      }
+    }
+
+    &--stats {
+      position: relative;
+    }
+
+    &--count {
+      margin-right: 1.1rem;
+      color: white;
+      width: 5rem;
+      text-align: center;
+      border-radius: 0.8rem;
+      vertical-align: middle;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    &--company-count {
+      background-image: linear-gradient(to right, var(--color-blue-4), var(--color-blue-3));
+      &:hover {
+        background-image: linear-gradient(to left, var(--color-blue-4), var(--color-blue-3));
+      }
+
+      &:active {
+        background-image: linear-gradient(to right, var(--color-blue-2), var(--color-blue-4));
+      }
+    }
+
+    &--concept-count {
+      background-image: linear-gradient(to right, var(--color-purple-4), var(--color-purple-3));
+      &:hover {
+        background-image: linear-gradient(to left, var(--color-purple-4), var(--color-purple-3));
+      }
+
+      &:active {
+        background-image: linear-gradient(to right, var(--color-purple-2), var(--color-purple-4));
+      }
+    }
+
+    &--project-count {
+      background-image: linear-gradient(to right, var(--color-green-3), var(--color-green-2));
+      &:hover {
+        background-image: linear-gradient(to left, var(--color-green-3), var(--color-green-2));
+      }
+
+      &:active {
+        background-image: linear-gradient(to right, var(--color-green-1), var(--color-green-3));
+      }
+    }
+
+    &--notification {
+      width: 2.4rem;
+      height: 2.4rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-align: center;
+      padding-top: 3px;
+      color: white;
+      position: absolute;
+      background-color: var(--color-red-1);
+      border-radius: 10rem;
+      top: -1.2rem;
+      right: -.5rem;
+      box-shadow: var(--box-shadow-close);
+    }
+  }
+
+  &__control-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    &--button {}
   }
 }
