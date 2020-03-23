@@ -1,6 +1,6 @@
 .container {
   min-width: 100%;
-  background-color: var(--color-blue-6);
+  background-color: var(--color-grey-light);
   min-height: 60rem;
 }
 
@@ -23,5 +23,22 @@
 
   &__home-page {
     margin-left: 6rem;
+  }
+
+  &__company-profile {
+    margin-left: 6rem;
+  }
+
+  &__profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    &--trending-companies {
+      flex: 1 1 50%;
+      min-width: 55rem;
+    }
+    &--project-updates {
+      flex: 1 1 50%;
+      min-width: 55rem;
+    }
   }
 }

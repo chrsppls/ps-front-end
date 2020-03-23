@@ -222,7 +222,7 @@
   margin-bottom: 0.5rem;
   margin-left: 3rem;
   margin-right: 1.5rem;
-  width: 50%;
+  flex: 50%;
 
 
   &__type {
@@ -415,7 +415,7 @@
   margin-bottom: 0.5rem;
   margin-left: 1.5rem;
   margin-right: 3rem;
-  width: 50%;
+  flex: 50%;
 
   &__section-title {
     display: flex;

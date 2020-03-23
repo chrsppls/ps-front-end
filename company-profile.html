@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/tableRowLinks.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.js"></script>
+    <script type="text/javascript" src="js/myChart.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>projectScape</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="img/projectScape_logo.png" alt="projectScape Logo" class="header__logo--image">
+          </a>
+          <div class="header__logo--title-box">
+            <h1 class="heading-primary">projectScape</h1>
+            <div class="divider divider__blue"></div>
+            <h2 class="header__logo--subtitle">Market Intelligence on Innovation</h2>
+          </div>
+        </div>
+        <form action="#" class="header__search">
+          <input type="text" class="header__search--input" placeholder="Search projectScape">
+          <button class="header__search--button">
+            <svg class="header__search--icon">
+              <use xlink:href="img/sprite.svg#icon-search-button"></use>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="header__user-nav">
+          <div class="header__user-nav--icon-box">
+            <svg class="header__user-nav--icon">
+              <use xlink:href="img/sprite.svg#icon-button-selector"></use>
+            </svg>
+          </div>
+
+          <div class="header__user-nav--user">
+            <span class="header__user-nav--user-name">Chris Peoples</span>
+            <img src="img/headshot.jpg" alt="" class="header__user-nav--user-image">
+          </div>
+
+        </nav>
+      </header>
+      <div class="content">
+        <nav class="navigation">
+          <div class="navigation__main-menu">
+            <div class="navigation__link">
+
+              <div class="navigation__icon--icon-box navigation__icon--title-box">
+                <svg class="navigation__icon navigation__icon--title">
+                  <use xlink:href="img/sprite.svg#icon-navigation"></use>
+                </svg>
+              </div>
+              <span class="navigation__link--text navigation__title heading-tertiary heading-tertiary__white">Navigation</span>
+
+            </div>
+            <div class="divider divider__white"></div>
+            <div class="navigation__link">
+              <a href="profile-browser.html" class="inline-btn-blue">
+                <div class="navigation__icon--icon-box">
+                  <svg class="navigation__icon inline-btn-blue--icon">
+                    <use xlink:href="img/sprite.svg#icon-company-overview"></use>
+                  </svg>
+                </div>
+                <span class="navigation__link--text inline-btn-blue--text">Profile Browser</span>
+              </a>
+            </div>
+            <div class="navigation__link">
+              <a href="#" class="inline-btn-blue">
+                <div class="navigation__icon--icon-box">
+                  <svg class="navigation__icon">
+                    <use xlink:href="img/sprite.svg#icon-project-profile"></use>
+                  </svg>
+                </div>
+                <span class="navigation__link--text inline-btn-blue--text">Market Analytics and Stats</span>
+              </a>
+            </div>
+            <div class="navigation__link">
+              <a href="#" class="inline-btn-blue">
+                <div class="navigation__icon--icon-box">
+                  <svg class="navigation__icon">
+                    <use xlink:href="img/sprite.svg#icon-offset-projects"></use>
+                  </svg>
+                </div>
+                <span class="navigation__link--text inline-btn-blue--text">Offset Projects</span>
+              </a>
+            </div>
+            <div class="navigation__link">
+              <a href="#" class="inline-btn-blue">
+                <div class="navigation__icon--icon-box">
+                  <svg class="navigation__icon">
+                    <use xlink:href="img/sprite.svg#icon-job-search"></use>
+                  </svg>
+                </div>
+                <span class="navigation__link--text inline-btn-blue--text">Jobs, Gigs, and Collaborations</span>
+              </a>
+            </div>
+            <div class="navigation__link">
+              <a href="#" class="inline-btn-blue">
+                <div class="navigation__icon--icon-box">
+                  <svg class="navigation__icon">
+                    <use xlink:href="img/sprite.svg#icon-news"></use>
+                  </svg>
+                </div>
+                <span class="navigation__link--text inline-btn-blue--text">News and Updates</span>
+              </a>
+            </div>
+            <div class="navigation__link">
+              <a href="#" class="inline-btn-blue">
+                <div class="navigation__icon--icon-box">
+                  <svg class="navigation__icon">
+                    <use xlink:href="img/sprite.svg#icon-training"></use>
+                  </svg>
+                </div>
+                <span class="navigation__link--text inline-btn-blue--text">Education and Training</span>
+              </a>
+            </div>
+            <div class="navigation__link">
+              <a href="#" class="inline-btn-blue">
+                <div class="navigation__icon--icon-box">
+                  <svg class="navigation__icon">
+                    <use xlink:href="img/sprite.svg#icon-events"></use>
+                  </svg>
+                </div>
+                <span class="navigation__link--text inline-btn-blue--text">Events</span>
+              </a>
+            </div>
+          </div>
+          <div class="navigation__copyright">
+            <p class="copyright__copyright--disclaimer">projectScape is an operating subsidiary of Peoples Partners & Associates (PP&A)</p>
+            <p class="copyright__copyright--disclaimer">&copy; Peoples Partners and Associates (PP&A), All Rights Reserved</p>
+          </div>
+        </nav>
+
+        <!-- <div class="filters"> <div class="filters__heading"> <h3 class="filters__heading--title heading-tertiary heading-tertiary__blue">Filters:</h3> <div class="divider divider__white"></div> </div> <div class="filters__filter"> <div
+        class="filters__title">Concept Owners</div> <input type="checkbox" id="concept-owner-filter" class="filter__checkbox"> <label for="" class="filters__checkbox--label">Show concept owners only</label> </div> </div> -->
+
+        <div class="profile-sections">
+          <div class="profile-sections__section profile-sections__section--overview">
+            <div class="profile-sections__section--icon-box">
+              <svg class="profile-sections__section--icon">
+                <use xlink:href="img/sprite.svg#icon-projects"></use>
+              </svg>
+            </div>
+            <div class="profile-sections__section--label">Overview</div>
+          </div>
+          <div class="profile-sections__section profile-sections__section--concepts">
+            <div class="profile-sections__section--icon-box">
+              <svg class="profile-sections__section--icon">
+                <use xlink:href="img/sprite.svg#icon-projects"></use>
+              </svg>
+            </div>
+            <div class="profile-sections__section--label">Concepts</div>
+          </div>
+          <div class="profile-sections__section profile-sections__section--projects">
+            <div class="profile-sections__section--icon-box">
+              <svg class="profile-sections__section--icon">
+                <use xlink:href="img/sprite.svg#icon-projects"></use>
+              </svg>
+            </div>
+            <div class="profile-sections__section--label">Projects</div>
+          </div>
+          <div class="profile-sections__section profile-sections__section--new-updates">
+            <div class="profile-sections__section--icon-box">
+              <svg class="profile-sections__section--icon">
+                <use xlink:href="img/sprite.svg#icon-projects"></use>
+              </svg>
+            </div>
+            <div class="profile-sections__section--label">News</div>
+          </div>
+          <div class="profile-sections__section profile-sections__section--competitors">
+            <div class="profile-sections__section--icon-box">
+              <svg class="profile-sections__section--icon">
+                <use xlink:href="img/sprite.svg#icon-projects"></use>
+              </svg>
+            </div>
+            <div class="profile-sections__section--label">Competitors</div>
+          </div>
+        </div>
+
+        <main class="main-section main-section__company-profile">
+
+          <div class="projectScape-plus">
+            <h2 class="projectScape-plus-description heading-secondary__grad-white">Don't let innovation pass you by, sign-up for projectScape Plus now</h2>
+
+            <button class="btn-white">
+              <svg class="quick-stats__section-title--stats-icon">
+                <use xlink:href="img/sprite.svg#icon-projects"></use>
+              </svg>
+              <span class="btn-white__visible">Learn More</span>
+
+            </button>
+          </div>
+
+          <div class="active-page">
+
+            <div class="main-content">
+
+              <div class="main-section__profile-section">
+
+                <div class="company-profile content-card">
+                  <div class="company-profile__header">
+                    <div class="section-heading-large general-background-gradient">
+                      <div class="section-heading-large__label ">OVERVIEW</div>
+                    </div>
+
+                    <div class="company-profile__top-line">
+                      <!-- <div class="company-profile__top-line--action-box"> -->
+                      <!-- <div class="company-profile__top-line--follow"> <div class="profile-card__top-line--follow-btn"> <button class="btn-small profile-card__buttons--button"> Follow </button> </div> </div> <div class="company-profile__top-line--give-props"> <svg
+                      class="company-profile__top-line--icon"> <use xlink:href="img/sprite.svg#icon-hand-clap"></use> </svg> </div> -->
+                      <!-- </div> -->
+                    </div>
+                    <div class="company-profile__header-content">
+
+                      <div class="company-profile__logo-box">
+                        <img src="img/company-logos/lo3-energy-logo.png" alt="" class="company-profile__logo">
+                      </div>
+                      <!-- </div> -->
+                      <div class="company-profile__basic-content">
+
+                        <div class="company-profile__title-box">
+                          <div class="company-profile__title-box--company-name heading-primary">Clean Energy Blockchain Network</div>
+                        </div>
+
+                        <div class="company-profile__details-box">
+
+                          <div class="company-profile__basic-details">
+                            <div class="company-profile__basic-details--HQ">Headquarters:</div>
+
+                            <div class="company-profile__basic-details--HQ-location">Portland, Oregon</div>
+                            <div class="company-profile__basic-details--country">United States of America</div>
+                            <a href="#" class="company-profile__basic-details--website">www.power-ledger.io</a>
+
+                            <div class="company-profile__links">
+                              <div class="company-profile__link-list">
+                                <div class="company-profile__link-list--link">
+                                  <a href="#">
+                                    <img src="img/social-icons/facebook.png" alt="" class="company-profile__link-list--image">
+                                  </a>
+                                </div>
+                                <div class="company-profile__link-list--link">
+                                  <a href="#">
+                                    <img src="img/social-icons/github.png" alt="" class="company-profile__link-list--image">
+                                  </a>
+                                </div>
+                                <div class="company-profile__link-list--link">
+                                  <a href="#">
+                                    <img src="img/social-icons/instagram.png" alt="" class="company-profile__link-list--image">
+                                  </a>
+                                </div>
+                                <div class="company-profile__link-list--link">
+                                  <a href="#">
+                                    <img src="img/social-icons/linkedin.png" alt="" class="company-profile__link-list--image">
+                                  </a>
+                                </div>
+                                <div class="company-profile__link-list--link">
+                                  <a href="#">
+                                    <img src="img/social-icons/medium.png" alt="" class="company-profile__link-list--image">
+                                  </a>
+                                </div>
+                                <div class="company-profile__link-list--link">
+                                  <a href="#">
+                                    <img src="img/social-icons/twitter.png" alt="" class="company-profile__link-list--image">
+                                  </a>
+                                </div>
+                                <div class="company-profile__link-list--link">
+                                  <a href="#">
+                                    <img src="img/social-icons/youtube.png" alt="" class="company-profile__link-list--image">
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <div class="company-profile__engagement-box">
+                            <div class="company-profile__engagement-box--engagement-item">
+
+                              <div class="company-profile__engagement-box--label">Props Received:</div>
+                              <div class="company-profile__engagement-box--count">308</div>
+                              <div class="company-profile__engagement-box--button-box">
+                                <button class="btn-white">
+                                  <svg class="company-profile__engagement-box--button-icon">
+                                    <use xlink:href="img/sprite.svg#icon-hand-clap"></use>
+                                  </svg>
+                                  <span class="btn-white__visible company-profile__engagement-box--button">Give Props</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="company-profile__engagement-box--engagement-item">
+
+                              <div class="company-profile__engagement-box--label">Followers:</div>
+                              <div class="company-profile__engagement-box--count">3810</div>
+                              <div class="company-profile__engagement-box--button-box">
+                                <button class="btn-white">
+                                  <svg class="company-profile__engagement-box--button-icon">
+                                    <use xlink:href="img/sprite.svg#icon-projects"></use>
+                                  </svg>
+                                  <span class="btn-white__visible company-profile__engagement-box--button">Follow</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <div class="divider divider__blue"></div>
+                    <div class="company-profile__description">
+                      <p class="company-profile__description--content">
+                        Power Ledger is a blockchain solution development company focused on developing and deploying solutions enabling decentralized energy ecosystems. The company has developed a set of 6 products specific to this objective including xGrid, μGrid, Power
+                        Port, C6 & C6+, and Asset Germination. An additional product VPP2.0 is currently in development. Through their efforts, Power Ledger looks to: - Help retailers manage their demand and supply - Allow everyday investors to own a piece of tomorrow's
+                        energy system - Monetize carbon and renewable energy credits
+                      </p>
+                    </div>
+                    <div class="company-profile__secondary-details-box">
+                      <div class="company-profile__secondary-details">
+                        <div class="company-profile__secondary-details--title">Company Details</div>
+                        <div class="company-profile__secondary-details--container">
+                          <div class="company-profile__secondary-details--label">Legal Name:</div>
+                          <div class="company-profile__secondary-details--description">Power Ledger</div>
+                        </div>
+                        <div class="company-profile__secondary-details--container">
+                          <div class="company-profile__secondary-details--label">Year Founded:</div>
+                          <div class="company-profile__secondary-details--description">5/12/2016</div>
+                        </div>
+                        <div class="company-profile__secondary-details--container">
+                          <div class="company-profile__secondary-details--label">Ownership Type:</div>
+                          <div class="company-profile__secondary-details--description">Privately Owned</div>
+                        </div>
+                        <div class="company-profile__secondary-details--container">
+                          <div class="company-profile__secondary-details--label">Primary Industry:</div>
+                          <div class="company-profile__secondary-details--description">Information Technology</div>
+                        </div>
+                        <div class="company-profile__secondary-details--container">
+                          <div class="company-profile__secondary-details--label">Parent Company:</div>
+                          <div class="company-profile__secondary-details--description">Direct Energy</div>
+                        </div>
+                        <div class="company-profile__secondary-details--container">
+                          <div class="company-profile__secondary-details--label">Number of Employees:</div>
+                          <div class="company-profile__secondary-details--description">11 - 50</div>
+                        </div>
+                        <div class="company-profile__secondary-details--container">
+                          <div class="company-profile__secondary-details--label">Revenue Range:</div>
+                          <div class="company-profile__secondary-details--description">$0 - $1MM</div>
+                        </div>
+                      </div>
+                      <div class="company-profile__secondary-details">
+                        <div class="company-profile__secondary-details--title">Company Locations</div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table-header table-2-col">Location</div>
+                          <div class="company-profile__secondary-details--table-header table-2-col">Country</div>
+                        </div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table table-2-col">Portland, Oregon</div>
+                          <div class="company-profile__secondary-details--table table-2-col">United States of America</div>
+                        </div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table table-2-col">New York, New York</div>
+                          <div class="company-profile__secondary-details--table table-2-col">United States of America</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="company-profile__secondary-details-box">
+                      <div class="company-profile__secondary-details">
+                        <div class="company-profile__secondary-details--title">Innovative Activity Summary</div>
+                        <div class="company-profile__roles-summary-box">
+                          <div class="company-profile__roles-summary-box--container concept-background-gradient">
+                            <div class="company-profile__roles-summary-box--value">3</div>
+                            <div class="company-profile__roles-summary-box--label">Concept Ownerships</div>
+                          </div>
+                          <div class="company-profile__roles-summary-box--container investment-background-gradient">
+                            <div class="company-profile__roles-summary-box--value">10</div>
+                            <div class="company-profile__roles-summary-box--label">Investments</div>
+
+                          </div>
+                          <div class="company-profile__roles-summary-box--container project-background-gradient">
+                            <div class="company-profile__roles-summary-box--value">9</div>
+                            <div class="company-profile__roles-summary-box--label">Project Associations</div>
+
+                          </div>
+                          <div class="company-profile__roles-summary-box--container dark-background-gradient">
+                            <div class="company-profile__roles-summary-box--value">5</div>
+                            <div class="company-profile__roles-summary-box--label">Other Partnerships</div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-profile content-card">
+                  <div class="company-profile__header">
+                    <div class="section-heading-large general-background-gradient">
+                      <div class="section-heading-large__label">LEADERSHIP & PARTNERSHIPS</div>
+                    </div>
+
+                    <div class="company-profile__secondary-details-box">
+                      <div class="company-profile__secondary-details">
+                        <div class="company-profile__secondary-details--title">Executive Management team</div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table-header table-2-col">Name</div>
+                          <div class="company-profile__secondary-details--table-header table-2-col">Position</div>
+                        </div>
+                        <div class="company-profile__secondary-details--table-container">
+
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/headshots/Lawrence.Orsini.1000px.png" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">Lawerence Orsini</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col">Founder | CEO</div>
+                        </div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/headshots/Blank-Headshot.png" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">Bill Colins</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col">COO | Co-founder</div>
+                        </div>
+                      </div>
+                      <div class="company-profile__secondary-details">
+                        <div class="company-profile__secondary-details--title">Board of Directors</div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table-header table-2-col">Name</div>
+                          <div class="company-profile__secondary-details--table-header table-2-col">Position</div>
+                        </div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/headshots/Blank-Headshot.png" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">Joe Schmoe</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col">Chairman</div>
+                        </div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/headshots/Blank-Headshot.png" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">Sally Struts</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col">Board Member</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="company-profile__secondary-details-box">
+                      <div class="company-profile__secondary-details">
+                        <div class="company-profile__secondary-details--title">Other Noteable Parties</div>
+                        <div class="company-profile__secondary-details--table-container">
+                          <div class="company-profile__secondary-details--table-header table-2-col">Partner</div>
+                          <div class="company-profile__secondary-details--table-header table-2-col center-aligner">Investor</div>
+                          <div class="company-profile__secondary-details--table-header table-2-col center-aligner">Concept Partner</div>
+                          <div class="company-profile__secondary-details--table-header table-2-col center-aligner">Project Partner</div>
+                        </div>
+                        <div data-href="" class="company-profile__secondary-details--table-container row-hover">
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/company-logos/Braemar.jpg" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">Braemar Energy Ventures</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div data-href="" class="company-profile__secondary-details--table-container row-hover">
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/company-logos/Siemens.png" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">Siemens</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark-blank"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark-blank"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div data-href="" class="company-profile__secondary-details--table-container row-hover">
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/company-logos/Centrica_logo.png" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">Centrica</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark-blank"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark-blank"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div data-href="" class="company-profile__secondary-details--table-container row-hover">
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/company-logos/peci-logo.png" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">PECI</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark-blank"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="company-profile__secondary-details--table-container row-hover">
+                          <div class="company-profile__secondary-details--table table-2-col">
+                            <img src="img/company-logos/Epex_Spot_Logo.png" alt="" class="table-2-col__nested-image">
+                            <div class="table-2-col__nested-label">EPEX SPOT</div>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark"></use>
+                            </svg>
+                          </div>
+                          <div class="company-profile__secondary-details--table table-2-col center-aligner">
+                            <svg class="quick-stats__section-title--stats-icon">
+                              <use xlink:href="img/sprite.svg#icon-checkmark-blank"></use>
+                            </svg>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-profile content-card">
+                  <div class="company-profile__header">
+                    <div class="section-heading-large concept-background-gradient">
+                      <div class="section-heading-large__label">CONCEPT OWNERSHIP</div>
+                    </div>
+
+                    <div class="company-profile__secondary-details-box company-profile__concept-summary-box">
+                      <div class="company-profile__concept-summary">
+                        <div class="company-profile__highlight-box concept-background-gradient">
+                          <div class="company-profile__highlight-box--value">3</div>
+                          <div class="company-profile__highlight-box--label">Concepts Owned</div>
+                        </div>
+                        <div class="company-profile__concept-chart">
+                          <div class="company-profile__secondary-details--title">Number of Concepts by Maturity</div>
+                          <canvas id="myChart" width="100%" height="100%"></canvas>
+                        </div>
+                      </div>
+                      <div class="divider divider__blue"></div>
+                      <div class="company-profile__concept-list">
+                        <div class="company-profile__secondary-details-box">
+                          <div class="company-profile__secondary-details">
+                            <div class="company-profile__secondary-details--title">Owned Concepts</div>
+                            <div class="company-profile__secondary-details--table-container">
+                              <div class="company-profile__secondary-details--table-header table-2-col">Concept Name</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Ownership Type</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Concept Maturity</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Date Announced</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Date First Launched</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Deployed in # of Projects</div>
+                            </div>
+                            <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">
+                                <a href="#" class="company-profile__secondary-details--table-link text-link">Exergy</a>
+                              </div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Sole Ownership`</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Planning/Developing`</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">3/5/2018</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">9/5/2018</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">1</div>
+                            </div>
+
+                            <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
+                              <div class="company-profile__secondary-details--table table-2-col">
+                                <a href="#" class="company-profile__secondary-details--table-link text-link">TransActive Grid</a>
+                              </div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Co-Ownership`</div>
+                              <div class="company-profile__secondary-details--table table-2-col">Pilot-Ready</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">2/5/2015</div>
+                              <div class="company-profile__secondary-details--table table-2-col">9/5/2018</div>
+                              <div class="company-profile__secondary-details--table table-2-col">4</div>
+                            </div>
+
+                            <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
+                              <div class="company-profile__secondary-details--table table-2-col">
+                                <a href="#" class="company-profile__secondary-details--table-link text-link">Grid Active</a>
+                              </div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Sole Ownership`</div>
+                              <div class="company-profile__secondary-details--table table-2-col">Planning/Developing</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">1/15/2013</div>
+                              <div class="company-profile__secondary-details--table table-2-col">3/4/2015</div>
+                              <div class="company-profile__secondary-details--table table-2-col">4</div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

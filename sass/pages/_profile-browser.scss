@@ -5,11 +5,11 @@
 .filters {
   background-color: var(--color-grey-light);
   width: 2rem;
-  opacity: 0.5;
+  // opacity: 0.5;
   height: 100%;
-  z-index: 2;
+  z-index: 0;
   overflow: hidden;
-  background-color: var(--color-grey-medium);
+  background-color: var(--color-grey-light);
   border-right: 1px solid var(--color-blue-primary);
   display: block;
   @include transitionWithDelay;
