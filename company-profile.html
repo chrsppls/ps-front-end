@@ -148,7 +148,7 @@
         class="filters__title">Concept Owners</div> <input type="checkbox" id="concept-owner-filter" class="filter__checkbox"> <label for="" class="filters__checkbox--label">Show concept owners only</label> </div> </div> -->
 
         <div class="profile-sections">
-          <div class="profile-sections__section profile-sections__section--overview">
+          <div class="profile-sections__section profile-sections__section--overview general-background-gradient">
             <div class="profile-sections__section--icon-box">
               <svg class="profile-sections__section--icon">
                 <use xlink:href="img/sprite.svg#icon-projects"></use>
@@ -156,7 +156,7 @@
             </div>
             <div class="profile-sections__section--label">Overview</div>
           </div>
-          <div class="profile-sections__section profile-sections__section--concepts">
+          <div class="profile-sections__section profile-sections__section--concepts concept-background-gradient">
             <div class="profile-sections__section--icon-box">
               <svg class="profile-sections__section--icon">
                 <use xlink:href="img/sprite.svg#icon-projects"></use>
@@ -164,7 +164,7 @@
             </div>
             <div class="profile-sections__section--label">Concepts</div>
           </div>
-          <div class="profile-sections__section profile-sections__section--projects">
+          <div class="profile-sections__section profile-sections__section--projects project-background-gradient">
             <div class="profile-sections__section--icon-box">
               <svg class="profile-sections__section--icon">
                 <use xlink:href="img/sprite.svg#icon-projects"></use>
@@ -172,7 +172,7 @@
             </div>
             <div class="profile-sections__section--label">Projects</div>
           </div>
-          <div class="profile-sections__section profile-sections__section--new-updates">
+          <div class="profile-sections__section profile-sections__section--new-updates news-background-gradient">
             <div class="profile-sections__section--icon-box">
               <svg class="profile-sections__section--icon">
                 <use xlink:href="img/sprite.svg#icon-projects"></use>
@@ -180,13 +180,13 @@
             </div>
             <div class="profile-sections__section--label">News</div>
           </div>
-          <div class="profile-sections__section profile-sections__section--competitors">
+          <div class="profile-sections__section profile-sections__section--competitors dark-background-gradient">
             <div class="profile-sections__section--icon-box">
               <svg class="profile-sections__section--icon">
                 <use xlink:href="img/sprite.svg#icon-projects"></use>
               </svg>
             </div>
-            <div class="profile-sections__section--label">Competitors</div>
+            <div class="profile-sections__section--label ">Competitors</div>
           </div>
         </div>
 
@@ -216,12 +216,7 @@
                       <div class="section-heading-large__label ">OVERVIEW</div>
                     </div>
 
-                    <div class="company-profile__top-line">
-                      <!-- <div class="company-profile__top-line--action-box"> -->
-                      <!-- <div class="company-profile__top-line--follow"> <div class="profile-card__top-line--follow-btn"> <button class="btn-small profile-card__buttons--button"> Follow </button> </div> </div> <div class="company-profile__top-line--give-props"> <svg
-                      class="company-profile__top-line--icon"> <use xlink:href="img/sprite.svg#icon-hand-clap"></use> </svg> </div> -->
-                      <!-- </div> -->
-                    </div>
+                    <div class="company-profile__top-line"></div>
                     <div class="company-profile__header-content">
 
                       <div class="company-profile__logo-box">
@@ -381,7 +376,7 @@
                         <div class="company-profile__roles-summary-box">
                           <div class="company-profile__roles-summary-box--container concept-background-gradient">
                             <div class="company-profile__roles-summary-box--value">3</div>
-                            <div class="company-profile__roles-summary-box--label">Concept Ownerships</div>
+                            <div class="company-profile__roles-summary-box--label">Concepts Owned</div>
                           </div>
                           <div class="company-profile__roles-summary-box--container investment-background-gradient">
                             <div class="company-profile__roles-summary-box--value">10</div>
@@ -456,7 +451,7 @@
                     </div>
                     <div class="company-profile__secondary-details-box">
                       <div class="company-profile__secondary-details">
-                        <div class="company-profile__secondary-details--title">Other Noteable Parties</div>
+                        <div class="company-profile__secondary-details--title">Partners</div>
                         <div class="company-profile__secondary-details--table-container">
                           <div class="company-profile__secondary-details--table-header table-2-col">Partner</div>
                           <div class="company-profile__secondary-details--table-header table-2-col center-aligner">Investor</div>
@@ -587,7 +582,7 @@
                         </div>
                         <div class="company-profile__concept-chart">
                           <div class="company-profile__secondary-details--title">Number of Concepts by Maturity</div>
-                          <canvas id="myChart" width="100%" height="100%"></canvas>
+                          <canvas id="conceptChart" width="100%" height="100%"></canvas>
                         </div>
                       </div>
                       <div class="divider divider__blue"></div>
@@ -611,7 +606,7 @@
                               <div class="company-profile__secondary-details--table table-2-col row-hover">Planning/Developing`</div>
                               <div class="company-profile__secondary-details--table table-2-col row-hover">3/5/2018</div>
                               <div class="company-profile__secondary-details--table table-2-col row-hover">9/5/2018</div>
-                              <div class="company-profile__secondary-details--table table-2-col row-hover">1</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover center-aligner">1</div>
                             </div>
 
                             <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
@@ -622,7 +617,7 @@
                               <div class="company-profile__secondary-details--table table-2-col">Pilot-Ready</div>
                               <div class="company-profile__secondary-details--table table-2-col row-hover">2/5/2015</div>
                               <div class="company-profile__secondary-details--table table-2-col">9/5/2018</div>
-                              <div class="company-profile__secondary-details--table table-2-col">4</div>
+                              <div class="company-profile__secondary-details--table table-2-col center-aligner">4</div>
                             </div>
 
                             <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
@@ -633,7 +628,111 @@
                               <div class="company-profile__secondary-details--table table-2-col">Planning/Developing</div>
                               <div class="company-profile__secondary-details--table table-2-col row-hover">1/15/2013</div>
                               <div class="company-profile__secondary-details--table table-2-col">3/4/2015</div>
-                              <div class="company-profile__secondary-details--table table-2-col">4</div>
+                              <div class="company-profile__secondary-details--table table-2-col center-aligner">4</div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-profile content-card">
+                  <div class="company-profile__header">
+                    <div class="section-heading-large project-background-gradient">
+                      <div class="section-heading-large__label">PROJECT LANDSCAPE</div>
+                    </div>
+
+                    <div class="company-profile__secondary-details-box company-profile__concept-summary-box">
+                      <div class="company-profile__concept-summary">
+                        <div class="company-profile__highlight-box project-background-gradient">
+                          <div class="company-profile__highlight-box--value">9</div>
+                          <div class="company-profile__highlight-box--label">Project Associations</div>
+                        </div>
+                        <div class="company-profile__concept-chart">
+                          <div class="company-profile__secondary-details--title">Projects by Phase and Status</div>
+                          <canvas id="projectChart" width="100%" height="100%"></canvas>
+                        </div>
+                      </div>
+                      <div class="divider divider__blue"></div>
+                      <div class="company-profile__concept-list">
+                        <div class="company-profile__secondary-details-box">
+                          <div class="company-profile__secondary-details">
+                            <div class="company-profile__secondary-details--title">Projects</div>
+                            <div class="company-profile__secondary-details--table-container">
+                              <div class="company-profile__secondary-details--table-header table-2-col">Project Name</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Project Role</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Project Phase</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Project Status</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Date Announced</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Date Launched</div>
+                              <div class="company-profile__secondary-details--table-header table-2-col">Project Location</div>
+                            </div>
+                            <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">
+                                <a href="#" class="company-profile__secondary-details--table-link text-link">Silicon Valley Power Project - Phase 1</a>
+                              </div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Technology Provider</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Pre-Pilot</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Planning/Developing`</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">3/5/2018</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">9/5/2018</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">United States of America</div>
+                            </div>
+
+                            <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
+                              <div class="company-profile__secondary-details--table table-2-col">
+                                <a href="#" class="company-profile__secondary-details--table-link text-link">Silicon Valley Power Project - Phase 2</a>
+                              </div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Investor</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Pilot</div>
+                              <div class="company-profile__secondary-details--table table-2-col">Active and Operating</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">2/5/2015</div>
+                              <div class="company-profile__secondary-details--table table-2-col">9/5/2018</div>
+                              <div class="company-profile__secondary-details--table table-2-col">Japan</div>
+                            </div>
+
+                            <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
+                              <div class="company-profile__secondary-details--table table-2-col">
+                                <a href="#" class="company-profile__secondary-details--table-link text-link">Brooklyn Microgrid</a>
+                              </div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">End-User</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">Post-Pilot</div>
+                              <div class="company-profile__secondary-details--table table-2-col">Completed/Terminated</div>
+                              <div class="company-profile__secondary-details--table table-2-col row-hover">1/15/2013</div>
+                              <div class="company-profile__secondary-details--table table-2-col">3/4/2015</div>
+                              <div class="company-profile__secondary-details--table table-2-col">Germany</div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="company-profile content-card">
+                  <div class="company-profile__header">
+                    <div class="section-heading-large news-background-gradient">
+                      <div class="section-heading-large__label">IN THE NEWS</div>
+                    </div>
+
+                    <div class="company-profile__secondary-details-box company-profile__concept-summary-box">
+                      <div class="company-profile__concept-list">
+                        <div class="company-profile__secondary-details-box">
+                          <div class="company-profile__secondary-details">
+                            <div class="company-profile__secondary-details--title">Articles</div>
+                            <div data-href="#" class="company-profile__secondary-details--table-container row-hover">
+                              <div class="company-profile__secondary-details--table table-2-col table-2-col__column-direction table-2-col__w-25">
+                                <a href="#" class="company-profile__secondary-details--table-link text-link">LO3 Energy launches a New Partnership</a>
+                                <div class="company-profile__secondary-details--small-label">Forbes</div>
+                                <div class="company-profile__secondary-details--small-label">4/23/2019</div>
+                              </div>
+                              <div class="company-profile__secondary-details--table table-2-col">
+                                <div class="table-2-col__align-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique aut, dolores eveniet maiores, temporibus laboriosam nulla quas minus. Nobis impedit praesentium reiciendis sint incidunt necessitatibus iusto
+                                  voluptatibus enim asperiores, magnam dicta voluptatem. Voluptas aspernatur, pariatur at ratione possimus enim distinctio.</div>
+                              </div>
                             </div>
 
                           </div>

@@ -218,11 +218,11 @@ body {
       margin-bottom: 2rem !important; } }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem !important; }
+  margin-bottom: 1rem !important; }
 
 .center-aligner {
   display: flex;
-  justify-content: center; }
+  justify-content: center !important; }
 
 .display-none {
   display: none; }
@@ -1499,6 +1499,12 @@ body {
       flex: 40%;
       font-weight: 700;
       line-height: 1; }
+    .company-profile__secondary-details--small-label {
+      font-size: 1.3rem; }
+      .company-profile__secondary-details--small-label:first-of-type {
+        margin-top: 1rem; }
+      .company-profile__secondary-details--small-label:not(:last-child) {
+        margin-bottom: .4rem; }
     .company-profile__secondary-details--description {
       margin-right: 1rem;
       flex: 60%;
@@ -1551,14 +1557,30 @@ body {
       border-top: 1px solid white; }
 
 .table-2-col {
-  width: 50%;
+  width: 100%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: flex-start; }
   .table-2-col__nested-image {
     max-width: 6rem;
     max-height: 6rem;
     margin-right: 1.5rem;
     position: relative; }
+  .table-2-col__column-direction {
+    flex-direction: column;
+    align-items: flex-start; }
+  .table-2-col__align-start {
+    align-self: flex-start !important; }
+  .table-2-col__w-15 {
+    flex: 15%; }
+  .table-2-col__w-20 {
+    flex: 20%; }
+  .table-2-col__w-25 {
+    flex: 25%; }
+  .table-2-col__w-30 {
+    flex: 30%; }
+  .table-2-col__w-35 {
+    flex: 35%; }
 
 .row-hover {
   cursor: pointer; }
@@ -1582,3 +1604,6 @@ body {
 
 .dark-background-gradient {
   background-image: linear-gradient(to right, var(--color-grey-darkest), var(--color-grey-dark)); }
+
+.news-background-gradient {
+  background-image: linear-gradient(to right, var(--color-red-1), var(--color-red-2)); }

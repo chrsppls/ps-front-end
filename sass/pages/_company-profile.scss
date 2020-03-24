@@ -302,6 +302,18 @@
       line-height: 1;
     }
 
+    &--small-label {
+      font-size: 1.3rem;
+
+      &:first-of-type {
+        margin-top: 1rem;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: .4rem;
+      }
+    }
+
     &--description {
       margin-right: 1rem;
       flex: 60%;
@@ -338,7 +350,6 @@
 
   &__concept-summary-box {
     flex-direction: column;
-    // margin-bottom: 3rem;
   }
 
   &__concept-summary {
@@ -348,8 +359,6 @@
   }
 
   &__concept-chart {
-    // flex:75%;
-    // height: 15rem;
     flex: 90%;
     height: 15rem;
   }
@@ -375,7 +384,6 @@
     &--label {
       font-size: 1.4rem;
       font-weight: 700;
-      // text-decoration: underline;
       border-bottom: 1px solid white;
       border-top: 1px solid white;
     }
@@ -385,16 +393,45 @@
 .concept-summary {}
 
 .table-2-col {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
+    justify-content: flex-start;
 
   &__nested-image {
     max-width: 6rem;
     max-height: 6rem;
     margin-right: 1.5rem;
     position: relative;
-    // border: 1px solid var(--color-grey-dark)
+  }
+
+  &__column-direction {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__align-start {
+    align-self: flex-start !important;
+  }
+
+  &__w-15 {
+    flex: 15%;
+  }
+
+  &__w-20 {
+    flex: 20%;
+  }
+
+  &__w-25 {
+    flex: 25%;
+  }
+
+  &__w-30 {
+    flex: 30%;
+  }
+
+  &__w-35 {
+    flex: 35%;
   }
 }
 
@@ -428,4 +465,8 @@
 
 .dark-background-gradient {
       background-image: linear-gradient(to right, var(--color-grey-darkest), var(--color-grey-dark));
+}
+
+.news-background-gradient {
+  background-image: linear-gradient(to right, var(--color-red-1), var(--color-red-2));
 }
